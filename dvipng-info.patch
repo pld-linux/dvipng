@@ -1,6 +1,7 @@
---- dvipng-0.7/dvipng.texi.orig	2003-10-17 11:48:25.000000000 +0200
-+++ dvipng-0.7/dvipng.texi	2003-10-20 21:40:16.425426232 +0200
-@@ -16,10 +16,10 @@
+diff -burN dvipng-1.1.orig/dvipng.texi dvipng-1.1/dvipng.texi
+--- dvipng-1.1.orig/dvipng.texi	2004-06-01 10:00:46.775193768 +0200
++++ dvipng-1.1/dvipng.texi	2004-06-01 10:01:56.697563952 +0200
+@@ -23,10 +23,10 @@
  @tolerance 10000 @emergencystretch 3em
  @end iftex
  
@@ -8,9 +9,9 @@
 +@dircategory TeX:
  @direntry
 -* DVI-to-PNG: (dvipng).              Translating TeX DVI files to Portable Network Graphics (PNG).
--* dvipng: (dvipng)Invoking dvipng.   DVI-to-PNG translator.
-+* DVI-to-PNG: (dvipng).			Translating TeX DVI files to PNG
-+* dvipng: (dvipng)dvipng.		DVI-to-PNG translator
+-* dvipng: (dvipng).                  A DVI-to-PNG translator.
++* DVI-to-PNG: (dvipng).              Translating TeX DVI files to PNG
++* dvipng: (dvipng).                  A DVI-to-PNG translator
  @end direntry
  
  @finalout
