@@ -1,0 +1,29 @@
+diff -urN dvipng-0.7.orig/Makefile.in dvipng-0.7/Makefile.in
+--- dvipng-0.7.orig/Makefile.in	2003-10-07 19:22:35.000000000 +0000
++++ dvipng-0.7/Makefile.in	2003-10-19 20:15:53.000000000 +0000
+@@ -36,8 +36,8 @@
+ $(objects): dvipng.h commands.h config.h
+ 
+ install-dvipng: dvipng
+-	-$(MKINSTALLDIRS) $(bindir)
+-	$(INSTALL) dvipng $(bindir)
++	-$(MKINSTALLDIRS) $(DESTDIR)$(bindir)
++	$(INSTALL) dvipng $(DESTDIR)$(bindir)
+ 
+ ####################################### The documentation
+ 
+@@ -69,11 +69,11 @@
+ 		readme.texi --output README
+ 
+ install-docs: docs
+-	-$(MKINSTALLDIRS) $(infodir)
++	-$(MKINSTALLDIRS) $(DESTDIR)$(infodir)
+ 	for x in dvipng.info* ; do \
+-		$(INSTALL_DATA) $$x $(infodir) ; \
++		$(INSTALL_DATA) $$x $(DESTDIR)$(infodir) ; \
+ 	done
+-	-$(INSTALL_INFO) --info-dir=$(infodir) dvipng.info
++	-$(INSTALL_INFO) --info-dir=$(DESTDIR)$(infodir) dvipng.info
+ 
+ 
+ ####################################### The test
