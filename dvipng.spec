@@ -1,21 +1,27 @@
-Summary:	-
-Summary(pl):	-
+Summary:	Convert DVI files to PNG.
+Summary(pl):	Konwersja plików DVI do PNG.
 Name:		dvipng
 Version:	0.7
-Release:	0.1
+Release:	0.2
 License:	GPL v2	
 Group:		Applcations/Console
 Source0:	http://dl.sourceforge.net/preview-latex/%{name}-%{version}.tar.gz
 # Source0-md5:	00a8c39343d277f4d25878d6faf5689b
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://www.sourceforge.net/projects/preview-latex/
+BuildRequires:	freetype-devel
+BuildRequires:	gd-devel
+BuildRequires:	kpathsea-devel
+BuildRequires:	tetex-format-plain
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-foo
+This program makes PNG graphics from DVI files as obtained from TeX and
+its relatives.
 
-%description -l pl
-shmoo
+It is intended to produce anti-aliased screen-resolution images as
+fast as is possible. The target audience is people who need to generate
+and regenerate many images again and again. 
 
 %prep
 %setup -q
@@ -27,8 +33,6 @@ shmoo
 
 %install
 rm -rf $RPM_BUILD_ROOT
-# create directories if necessary
-#install -d $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
@@ -39,4 +43,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README RELEASE
+%{_infodir}/*.info*
 %attr(755,root,root) %{_bindir}/*
