@@ -8,11 +8,13 @@ Group:		Applcations/Console
 Source0:	http://dl.sourceforge.net/preview-latex/%{name}-%{version}.tar.gz
 # Source0-md5:	00a8c39343d277f4d25878d6faf5689b
 Patch0:		%{name}-DESTDIR.patch
+Patch1:		%{name}-info.patch
 URL:		http://www.sourceforge.net/projects/preview-latex/
 BuildRequires:	freetype-devel
 BuildRequires:	gd-devel
 BuildRequires:	kpathsea-devel
 BuildRequires:	tetex-format-plain
+BuildRequires:	texinfo
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -34,6 +36,7 @@ potrzebuj±cych ci±gle generowaæ lub regenerowaæ wiele obrazków.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %configure
@@ -47,6 +50,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post
+[ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir %{_infodir} >/dev/null 2>&1
+
+%postun
+[ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir %{_infodir} >/dev/null 2>&1
 
 %files
 %defattr(644,root,root,755)
