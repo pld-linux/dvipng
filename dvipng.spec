@@ -1,12 +1,12 @@
 Summary:	Convert DVI files to PNG
 Summary(pl):	Konwersja plików DVI do PNG
 Name:		dvipng
-Version:	1.4
+Version:	1.5
 Release:	1
 License:	GPL v2
 Group:		Applications/Console
 Source0:	http://dl.sourceforge.net/dvipng/%{name}-%{version}.tar.gz
-# Source0-md5:	3c25206dda05bf9c8907a7b0097b2263
+# Source0-md5:	214b0831efb6c31e31a85e362921347d
 Patch0:		%{name}-info.patch
 URL:		http://www.sourceforge.net/projetcs/dvipng/
 BuildRequires:	freetype-devel
