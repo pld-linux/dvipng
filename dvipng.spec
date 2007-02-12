@@ -1,5 +1,5 @@
 Summary:	Convert DVI files to PNG
-Summary(pl):	Konwersja plików DVI do PNG
+Summary(pl.UTF-8):   Konwersja plikÃ³w DVI do PNG
 Name:		dvipng
 Version:	1.8
 Release:	1
@@ -24,13 +24,13 @@ It is intended to produce anti-aliased screen-resolution images as
 fast as is possible. The target audience is people who need to
 generate and regenerate many images again and again.
 
-%description -l pl
-Ten program tworzy obrazki PNG z plików DVI tworzonych przez TeXa i
-pokrewne narzêdzia.
+%description -l pl.UTF-8
+Ten program tworzy obrazki PNG z plikÃ³w DVI tworzonych przez TeXa i
+pokrewne narzÄ™dzia.
 
-Program ma s³u¿yæ do tworzenie obrazków w rozdzielczo¶ci ekranu z
-antyaliasingiem tak szybko, jak to tylko mo¿liwe. Jest on dla ludzi
-potrzebuj±cych ci±gle generowaæ lub regenerowaæ wiele obrazków.
+Program ma sÅ‚uÅ¼yÄ‡ do tworzenie obrazkÃ³w w rozdzielczoÅ›ci ekranu z
+antyaliasingiem tak szybko, jak to tylko moÅ¼liwe. Jest on dla ludzi
+potrzebujÄ…cych ciÄ…gle generowaÄ‡ lub regenerowaÄ‡ wiele obrazkÃ³w.
 
 %prep
 %setup -q
