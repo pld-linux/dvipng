@@ -1,5 +1,5 @@
 Summary:	Convert DVI files to PNG
-Summary(pl.UTF-8):   Konwersja plików DVI do PNG
+Summary(pl.UTF-8):	Konwersja plików DVI do PNG
 Name:		dvipng
 Version:	1.8
 Release:	1
