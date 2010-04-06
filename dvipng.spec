@@ -13,7 +13,7 @@ BuildRequires:	freetype-devel
 BuildRequires:	gd-devel
 BuildRequires:	kpathsea-devel
 BuildRequires:	texinfo
-BuildRequires:	texlive-plain
+BuildRequires:	texinfo-texi2dvi
 Conflicts:	texlive
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
