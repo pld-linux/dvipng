@@ -8,7 +8,7 @@ Group:		Applications/Console
 Source0:	http://downloads.sourceforge.net/dvipng/%{name}-%{version}.tar.gz
 # Source0-md5:	da8d062977cbfeb2fb39b81d28d0b7f3
 Patch0:		%{name}-info.patch
-URL:		http://www.sourceforge.net/projetcs/dvipng/
+URL:		http://sourceforge.net/projects/dvipng/
 BuildRequires:	freetype-devel
 BuildRequires:	gd-devel
 BuildRequires:	kpathsea-devel
