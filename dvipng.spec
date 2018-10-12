@@ -2,18 +2,20 @@ Summary:	Convert DVI files to PNG
 Summary(pl.UTF-8):	Konwersja plików DVI do PNG
 Name:		dvipng
 Version:	1.15
-Release:	1
-License:	GPL v2
-Group:		Applications/Console
+Release:	2
+License:	LGPL v3
+Group:		Applications/Graphics
 Source0:	http://downloads.sourceforge.net/dvipng/%{name}-%{version}.tar.gz
 # Source0-md5:	c82043f4a366a560bb87fd9eafb6ef2f
 Patch0:		%{name}-info.patch
 URL:		http://sourceforge.net/projects/dvipng/
-BuildRequires:	freetype-devel
-BuildRequires:	gd-devel
+BuildRequires:	freetype-devel >= 2
+BuildRequires:	gd-devel >= 2.0.28
 BuildRequires:	kpathsea-devel
+BuildRequires:	libpng-devel
 BuildRequires:	texinfo
-BuildRequires:	texinfo-texi2dvi
+BuildRequires:	zlib-devel
+Requires:	gd >= 2.0.28
 Conflicts:	texlive
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -51,15 +53,17 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post	-p	/sbin/postshell
+%post	-p /sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
-%postun	-p	/sbin/postshell
+%postun	-p /sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog README RELEASE
-%attr(755,root,root) %{_bindir}/dvi*
-%{_mandir}/man1/*
-%{_infodir}/*.info*
+%attr(755,root,root) %{_bindir}/dvigif
+%attr(755,root,root) %{_bindir}/dvipng
+%{_mandir}/man1/dvigif.1*
+%{_mandir}/man1/dvipng.1*
+%{_infodir}/dvipng.info*

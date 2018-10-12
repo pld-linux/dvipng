@@ -10,8 +10,8 @@ diff -burN dvipng-1.1.orig/dvipng.texi dvipng-1.1/dvipng.texi
  @direntry
 -* DVI-to-PNG: (dvipng).              Translating TeX DVI files to Portable Network Graphics (PNG).
 -* dvipng: (dvipng).                  A DVI-to-PNG translator.
-+* DVI-to-PNG: (dvipng).              Translating TeX DVI files to PNG
-+* dvipng: (dvipng).                  A DVI-to-PNG translator
++* DVI-to-PNG: (dvipng).			Translating TeX DVI files to PNG
++* dvipng: (dvipng).			A DVI-to-PNG translator
  @end direntry
  
  @finalout
